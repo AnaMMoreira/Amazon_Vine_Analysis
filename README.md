@@ -11,36 +11,46 @@ In this project, one dataset was chosen from approximately 50 datasets. Each one
 
 Using the cloud ETL process, an AWS RDS database was created which contains with tables in PgAdmin, from the selected dataset from the Amazon Review datasets, and extracted the dataset into a DataFrame. The DataFrame was split into four separate DataFrames that match the table schema in PgAdmin. The transformed data was then uploaded into the appropriate tables and queries were run in PgAdmin.  Posteriorly it was confirmed that the data had been uploaded.
 
-# An Amazon Review dataset is extracted as a DataFrame
+## An Amazon Review dataset is extracted as a DataFrame
 
 Using PySpark and Pandas the data was uploaded and the necessary queries and manipulations yielded the sought after DataFrames as shown in Figure 1
 
 Figure1 Data Upload and manipulation
 
-! <insert Figure 1>
+![insert Figure 1](https://github.com/AnaMMoreira/Amazon_Vine_Analysis/blob/main/Figure1_Amazon_Reviews_ETL2.ipynb%20_Colab.pdf)
 
-# Figure 1 shows the extracted dataset transformed into four DataFrames with the correct columns 
+## Figure 1 shows the extracted dataset transformed into four DataFrames with the correct columns 
 
 
-# All four DataFrames were loaded into their respective tables in PgAdmin.  Figure 2 shows the ERD generated after the database and corresponding Tables were created in PostgreSQL using PgAdmin.
+## All four DataFrames were loaded into their respective tables in PgAdmin.  Figure 2 shows the ERD generated after the database and corresponding Tables were created in PostgreSQL using PgAdmin.
 
-Figure2 - ERD
+![insert Figure 2](Figure2 - ERD)
 
-! <insert Figure 2>
+![insert Figure 2](https://github.com/AnaMMoreira/Amazon_Vine_Analysis/blob/main/Figure2_Amazon_vine_analysis_ERD.png)
 
 Figure 3 demonstrates the structure of the Database in PgAdmin and Figures 5a thru 5b demonstrate that the filtered data tables were successfully uploaded into the PostgreSQL database.
 
 Figure 3 PgAdmin Database
 
-! <insert Figure 3>
+![insert Figure 3](https://github.com/AnaMMoreira/Amazon_Vine_Analysis/blob/main/Figure3_PgAdmin_table_Process.png)
 
 Figures 4a-4d PostgreSQL Tables
+
+![insert Figure 4a](https://github.com/AnaMMoreira/Amazon_Vine_Analysis/blob/main/Figure_4a_Table1.png)
+
+![insert Figure 4b](https://github.com/AnaMMoreira/Amazon_Vine_Analysis/blob/main/Figure_4b_Table2.png)
+
+![insert Figure 4c](https://github.com/AnaMMoreira/Amazon_Vine_Analysis/blob/main/Figure_4c_Table3.png)
+
+![insert Figure 4d](https://github.com/AnaMMoreira/Amazon_Vine_Analysis/blob/main/Figure_4d_Table4.png)
 
 ## Determining Bias of Vine Reviews
 
 In order to determine if Paid Vine-Users Reviews are influenced to give higher score reviews, given the monetary gain.  A comparison of Paid vs Unpaid High Score User Reviews was developed using a series of data queries and filtering to yield the target numbers that were in question.
 
 Figure5 - Demonstrates how the Amazon Vine-Users Reviews Analysis was conducted in detail.
+
+![insert Figure 5](https://github.com/AnaMMoreira/Amazon_Vine_Analysis/blob/main/Figure5_Amazon_Vine_Analysis.ipynb%20_Colab.pdf)
 
 In Figure 5 it can be observed that the data was loaded Into Spark Dataframe and first filtered by Review Contributors which had more than 20 Reviews.  The selection was further reduced by filtering for Reviews considered Useful by at least 50% of the total reviews.  If one could perhaps equate "usefulness" with a measure of accuracy, then the target croup could be described as High Accuracy and High Frequency.  This yielded a Group of higher frequency of contribution and therefore influential, and considered Reliable given their "Useful" rating or Accuracy.  This subset of target Reviewers was then split into paid and unpaid contributors of the same category of yielding high volume and high ranking reviews.
 For the final calculation used for comparison the two subsets were filters by 5-Star Reviews as a measure of Bias.
@@ -51,7 +61,7 @@ For the final calculation used for comparison the two subsets were filters by 5-
 
 Figure 6 Amazon Vine 
  
-!<Figure6>
+![insert Figure 2](https://github.com/AnaMMoreira/Amazon_Vine_Analysis/blob/main/Figure6_Amazon_Vine_Analysis_Summary.png)
 
-Both Groups have similar generous contributions rates of 52.7 % and 52.3 % when ranking products.  On the other hand perhaps people in general regardless of what they have to gain from the exercise, are honest and accurate when thinking analytical about product reviews!       
+Both Groups have similar generous 5-star distribution rates of 52.7 % and 52.3 % when ranking products.  On the other hand perhaps people in general regardless of what they have to gain from the exercise, are honest and accurate when thinking analytical about product reviews!       
 
