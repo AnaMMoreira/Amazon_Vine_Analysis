@@ -63,5 +63,5 @@ Figure 6 Amazon Vine
  
 ![insert Figure 2](https://github.com/AnaMMoreira/Amazon_Vine_Analysis/blob/main/Figure6_Amazon_Vine_Analysis_Summary.png)
 
-Both Groups have similar generous 5-star distribution rates of 52.7 % and 52.3 % when ranking products.  On the other hand perhaps people in general regardless of what they have to gain from the exercise, are honest and accurate when thinking analytical about product reviews!       
+Both Groups have similar generous 5-star distribution rates of 52.7 % and 52.3 % when ranking products.  This seems to indicate that Vine users are not biased when reviewing products (bc they getting paind or not getting paid to do it). it seemes to suggest, that people in general, regardless of what they have to gain from the exercise, are honest and accurate when thinking analytical about product reviews!       
 
